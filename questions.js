@@ -23,29 +23,33 @@
  */
 
 /**
- * Exercise 1: Callback Function in Asynchronous JavaScript
+ * Exercise 1: Callback Function in Asynchronous JavaScript with Error Handling
  *
  * Objective:
- * To reinforce understanding of asynchronous operations in JavaScript using
- * callback functions.
+ * Enhance understanding of asynchronous operations in JavaScript using callback functions with error handling.
  *
  * Task:
- * Create a function `processData` that simulates data retrieval from a
- * database using a callback function.
- * This function should not return anything, but instead, it should accept
- * two arguments: `data`, which is a string, and `callback`, which is a function.
- * After simulating a delay (e.g., using `setTimeout`), it should call the `callback`
- * function with a transformed string where every letter is capitalized.
+ * Modify the `processData` function to simulate data processing with a callback function handling both success and error scenarios.
+ * This function should accept two arguments: `data`, a string, and `callback`, a function. The function should check if the input
+ * `data` string contains the word "error". If it does, after a delay, the `callback` should be invoked with an `Error` object
+ * and `undefined` result. Otherwise, it should call the `callback` with `null` for the error and the data string transformed
+ * to uppercase for the result.
  *
  * Example Usage:
- * processData("fetching data", function(result) {
- *   console.log(result); // Should output: "FETCHING DATA" after the delay
+ * processData("fetching data", function(err, result) {
+ *   if (err) {
+ *     console.error(err.message); // Should log: "process data error"
+ *   } else {
+ *     console.log(result); // Should output: "FETCHING DATA" after the delay
+ *   }
  * });
  *
  * Instructions:
- * - Use `setTimeout` to simulate a data retrieval delay (longer than 100 millisecond).
- * - Ensure that the callback function is called only after this simulated delay.
- * - Transform the input data to uppercase before passing it to the callback.
+ * - Implement a delay using `setTimeout` of at least 100 milliseconds.
+ * - If the input `data` includes the word "error", call the `callback` with an `Error` object
+ *   (`new Error("process data error")`) and `undefined` for the result.
+ * - If the input `data` does not include the word "error", call the `callback` with `null` for
+ *   the error and the input string in uppercase for the result.
  *
  * Write your code below:
  */
