@@ -1,6 +1,6 @@
-# Week 3 JavaScript Functions
+# Week 4 Asynchronous JavaScript Functions
 
-This project contains exercises for Week 3 of the Mobile Application Development course. It covers the JavaScript array functions.
+This project contains exercises for Week 4 of the Mobile Application Development course. It covers the JavaScript array functions.
 
 ## Getting Started
 
@@ -17,8 +17,8 @@ Follow these steps to set up your development environment:
 Clone the repository:
 
 ```bash
-git clone https://github.com/LarryAtGU/mad_ex_week3.git
-cd mad_ex_week3
+git clone https://github.com/LarryAtGU/mad_ex_week4.git
+cd mad_ex_week4
 npm install
 ```
 
