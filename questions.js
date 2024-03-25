@@ -45,7 +45,7 @@
  * });
  *
  * Instructions:
- * - Implement a delay using `setTimeout` of at least 100 milliseconds.
+ * - Implement a delay using `setTimeout` of at least 100 milliseconds and less than 500 milliseconds.
  * - If the input `data` includes the word "error", call the `callback` with an `Error` object
  *   (`new Error("process data error")`) and `undefined` for the result.
  * - If the input `data` does not include the word "error", call the `callback` with `null` for
