@@ -45,7 +45,7 @@
  * });
  *
  * Instructions:
- * - Implement a delay using `setTimeout` of at least 100 milliseconds and less than 500 milliseconds.
+ * - Implement a delay using `setTimeout` of at least 100 milliseconds and less than 150 milliseconds.
  * - If the input `data` includes the word "error", call the `callback` with an `Error` object
  *   (`new Error("process data error")`) and `undefined` for the result.
  * - If the input `data` does not include the word "error", call the `callback` with `null` for
@@ -146,7 +146,7 @@ function createStudentFile(studentName, studentInfo, callback) {
  *    `setTimeout` and resolve the Promise with a mock user object, e.g.,
  *    `{ id: userId, name: 'John Doe' }`.
  * - If `userId` is not a positive number, reject the Promise with an
- *    `Error` stating "Invalid user ID".
+ *    `new Error("Invalid user ID")`. Also delay 100ms.
  * - Use `setTimeout` with a delay (e.g., 100 milliseconds) to simulate
  *    the database call whether resolving or rejecting the Promise.
  *
@@ -187,8 +187,8 @@ function loadUserData(userId) {
  *    accepts a single parameter: `userId`.
  * - Use a Promise that resolves with mock user details (e.g.,
  *    `{ id: userId, name: 'Jane Doe' }`) if `userId` is positive.
- *    It should reject with an error message "Invalid user ID" if
- *    `userId` is not positive.
+ *    It should reject with a new Error("Invalid user ID") if
+ *    `userId` is not positive. Also with 100ms delay.
  * - Use `setTimeout` within the Promise to simulate a delay (e.g.,
  *    100 milliseconds) in fetching the data.
  * - In the function, use await to wait for the Promise to settle,
