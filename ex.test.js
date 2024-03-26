@@ -117,6 +117,17 @@ describe("Exercise 2: Student File Creation with Validation in Node.js", () => {
       done();
     });
   });
+
+  test("returns 'Wrong Information' error before 'File exists' error", (done) => {
+    // Create a file before test
+    fs.writeFileSync(filename, "Initial content");
+    const wrongInfo = { ...studentInfo, firstName: "Mark", surName: "Twain" };
+    createStudentFile(studentName, wrongInfo, (err) => {
+      expect(err).toBeInstanceOf(Error);
+      expect(err.message).toBe("Wrong Information");
+      done();
+    });
+  });
 });
 
 describe("Exercise 3: Using Promises in Asynchronous JavaScript", () => {
